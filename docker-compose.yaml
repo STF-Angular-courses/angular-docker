@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  ng:
+    build: .docker/ng
+    volumes:
+      - ./:/ng
+    working_dir: /ng
+    ports:
+      - ${NG_PORT}:4200
+    networks:
+      - default
